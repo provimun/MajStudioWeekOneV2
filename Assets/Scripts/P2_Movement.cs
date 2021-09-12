@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class P2_Movement : MonoBehaviour
 {
+
+    float movementspeed;
+
     // Start is called before the first frame update
     void Start()
     {
-        public float movementspeed = 3;
+        movementspeed = 3;
     }
 
     // Update is called once per frame
