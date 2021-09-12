@@ -9,7 +9,6 @@ public class SoundEffectManager : MonoBehaviour
 
     AudioSource myAudioSource;
 
-    public AudioClip soundEffect;
     public float audioScale;
 
     bool hasPlayedSound = false; //safeguard
@@ -28,7 +27,7 @@ public class SoundEffectManager : MonoBehaviour
             //now this is a nice trick. have to remember this one 
         if((prevX * transform.position.x) < 0 && !hasPlayedSound) {
             //..it's crossed the center, so play its sound! 
-            myAudioSource.PlayOneShot(soundEffect, audioScale); 
+            myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
             hasPlayedSound = true; 
         }
 
@@ -40,7 +39,7 @@ public class SoundEffectManager : MonoBehaviour
     void OnTriggerEnter(Collider otherCollider) {
 
         //if the collider is the player, play my sound but fucked up 
-        //myAudioSource.PlayOneShot(soundEffect, audioScale); 
+        //myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
         //hasPlayedSound = true; 
 
     }
