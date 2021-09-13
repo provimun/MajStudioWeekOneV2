@@ -30,7 +30,7 @@ public class SoundEffectManager : MonoBehaviour
     void Update() {
 
         //adding rudimentary movement cause programmer is busy 
-        transform.Translate(speed, 0, 0);
+        transform.Translate(speed * Time.deltaTime, 0, 0);
 
         //if the object crosses x=0, ie if the signs are different, ie if they multiply to a negative number...
             //now this is a nice trick. have to remember this one 
