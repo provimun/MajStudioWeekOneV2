@@ -10,6 +10,10 @@ public class SoundEffectManager : MonoBehaviour
     AudioSource myAudioSource;
 
     public float audioScale;
+    public bool isTravellingLeft;
+
+    float loopCoordsPos = 10.0F;
+    float loopCoordsNeg = -10.0F;
 
     bool hasPlayedSound = false; //safeguard
     float prevX;
@@ -29,6 +33,17 @@ public class SoundEffectManager : MonoBehaviour
             //..it's crossed the center, so play its sound! 
             myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
             hasPlayedSound = true; 
+        }
+
+        //if we cross a certain x value, we loop back around exactly. 
+        if(!isTravellingLeft && transform.position.x > loopCoordsPos) {
+            //overflow positive, return to negative 
+            transform.Translate((transform.position.x - loopCoordsNeg), 0, 0);
+            resetMe();
+        } else if(isTravellingLeft && transform.position.x < loopCoordsNeg) {
+            //overflow negative, return to positive 
+            transform.Translate((transform.position.x - loopCoordsPos), 0, 0);
+            resetMe();
         }
 
         //finally, update the previous x pos 
