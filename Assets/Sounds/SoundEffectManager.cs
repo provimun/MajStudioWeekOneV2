@@ -10,22 +10,27 @@ public class SoundEffectManager : MonoBehaviour
     AudioSource myAudioSource;
 
     public float audioScale;
-    public bool isTravellingLeft;
+    public float speed;
 
     float loopCoordsPos = 10.0F;
     float loopCoordsNeg = -10.0F;
 
     bool hasPlayedSound = false; //safeguard
     float prevX;
+    bool isTravellingLeft;
 
     // Start is called before the first frame update
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
         prevX = transform.position.x;
+        isTravellingLeft = speed > 0 ? false : true; 
     }
 
     void Update() {
+
+        //adding rudimentary movement cause programmer is busy 
+        transform.Translate(speed, 0, 0);
 
         //if the object crosses x=0, ie if the signs are different, ie if they multiply to a negative number...
             //now this is a nice trick. have to remember this one 
