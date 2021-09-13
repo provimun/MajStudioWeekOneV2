@@ -56,11 +56,11 @@ public class SoundEffectManager : MonoBehaviour
 
     }
 
+    //if the player runs into us, play our sound at the wrong time! 
     void OnTriggerEnter(Collider otherCollider) {
 
-        //if the collider is the player, play my sound but fucked up 
-        //myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
-        //hasPlayedSound = true; 
+        myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
+        hasPlayedSound = true; 
 
     }
 
