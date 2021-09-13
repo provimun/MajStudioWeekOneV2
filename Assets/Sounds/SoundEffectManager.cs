@@ -38,11 +38,11 @@ public class SoundEffectManager : MonoBehaviour
         //if we cross a certain x value, we loop back around exactly. 
         if(!isTravellingLeft && transform.position.x > loopCoordsPos) {
             //overflow positive, return to negative 
-            transform.Translate((transform.position.x - loopCoordsNeg), 0, 0);
+            transform.Translate((loopCoordsNeg - transform.position.x), 0, 0);
             resetMe();
         } else if(isTravellingLeft && transform.position.x < loopCoordsNeg) {
             //overflow negative, return to positive 
-            transform.Translate((transform.position.x - loopCoordsPos), 0, 0);
+            transform.Translate((loopCoordsPos - transform.position.x), 0, 0);
             resetMe();
         }
 
