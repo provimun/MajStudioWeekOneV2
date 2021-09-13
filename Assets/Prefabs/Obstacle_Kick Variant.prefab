@@ -11,9 +11,21 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7b037c213cae3974085eb36db808ca73, type: 3}
+    - target: {fileID: 4953442713403687346, guid: 69de307ced21d0248b3ec12755971d5a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953442713403687346, guid: 69de307ced21d0248b3ec12755971d5a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.70284986
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953442713403687346, guid: 69de307ced21d0248b3ec12755971d5a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6551362
+      objectReference: {fileID: 0}
     - target: {fileID: 5054607938951425700, guid: 69de307ced21d0248b3ec12755971d5a, type: 3}
       propertyPath: m_Name
-      value: Obstacle_Kick
+      value: Obstacle_Kick Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6356928929507574045, guid: 69de307ced21d0248b3ec12755971d5a, type: 3}
       propertyPath: m_RootOrder
