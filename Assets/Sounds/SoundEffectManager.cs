@@ -12,20 +12,20 @@ public class SoundEffectManager : MonoBehaviour
     public float audioScale;
     public float audioScaleMessup;
     public float speed;
+    public bool isTravellingLeft;
 
     float loopCoordsPos = 8.0F;
     float loopCoordsNeg = -8.0F;
 
     bool hasPlayedSound = false; //safeguard
     float prevX;
-    bool isTravellingLeft;
 
     // Start is called before the first frame update
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
         prevX = transform.position.x;
-        isTravellingLeft = speed > 0 ? false : true; 
+        //isTravellingLeft = speed > 0 ? false : true; 
     }
 
     void Update() {
