@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7441804842250167407}
   - component: {fileID: 4953442713403687346}
-  - component: {fileID: 3195965652492686291}
   m_Layer: 0
   m_Name: Obstacle1
   m_TagString: Untagged
@@ -83,32 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3195965652492686291
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4736485759177854327}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.0146208, y: 2.8236198}
-  m_EdgeRadius: 0
 --- !u!1 &5054607938951425700
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +93,7 @@ GameObject:
   - component: {fileID: 6356928929507574045}
   - component: {fileID: 4279049131144761797}
   - component: {fileID: 8374447939593260923}
+  - component: {fileID: 6050634069046110222}
   m_Layer: 0
   m_Name: ObstaclePrefab
   m_TagString: Untagged
@@ -251,4 +225,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioScale: 0.5
+  audioScaleMessup: 0.75
   speed: 4.25
+--- !u!61 &6050634069046110222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5054607938951425700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.023786575, y: 0.0985443}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53106505, y: 0.8029114}
+  m_EdgeRadius: 0

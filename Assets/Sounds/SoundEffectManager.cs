@@ -10,6 +10,7 @@ public class SoundEffectManager : MonoBehaviour
     AudioSource myAudioSource;
 
     public float audioScale;
+    public float audioScaleMessup;
     public float speed;
 
     float loopCoordsPos = 8.0F;
@@ -57,9 +58,9 @@ public class SoundEffectManager : MonoBehaviour
     }
 
     //if the player runs into us, play our sound at the wrong time! 
-    void OnTriggerEnter(Collider otherCollider) {
+    void OnTriggerEnter2D(Collider2D otherCollider) {
 
-        myAudioSource.PlayOneShot(myAudioSource.clip, audioScale); 
+        myAudioSource.PlayOneShot(myAudioSource.clip, audioScaleMessup); 
         hasPlayedSound = true; 
 
     }
