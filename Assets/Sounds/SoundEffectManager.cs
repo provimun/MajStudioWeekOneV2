@@ -12,8 +12,8 @@ public class SoundEffectManager : MonoBehaviour
     public float audioScale;
     public float speed;
 
-    float loopCoordsPos = 10.0F;
-    float loopCoordsNeg = -10.0F;
+    float loopCoordsPos = 8.0F;
+    float loopCoordsNeg = -8.0F;
 
     bool hasPlayedSound = false; //safeguard
     float prevX;
