@@ -22,4 +22,9 @@ public class P1_Movement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y - movementspeed, transform.position.z);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        
+    }
 }
